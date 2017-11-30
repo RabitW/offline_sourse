@@ -18,3 +18,14 @@ dpkg-scanpackages /var/debs/ /dev/null |gzip > /var/debs/Packages.gz -r
 cp /var/debs/Packages.gz //var/debs/archives/Packages.gz
 
 deb file:/var debs/
+
+
+pip的包离线安装
+第一步：下载包
+pip install django-simple-captcha -i http://pypi.douban.com/simple/ -d /tmp/pipdebs/
+把需要的包下载到/tmp/pipdebs目录
+
+第二步：复制安装
+把需要的包复制到指定安装的服务器的目录
+cp -r pipdebs /tmp/pipdebs
+pip install --no-index --find-links /tmp/pipdebs -r requirements.txt
