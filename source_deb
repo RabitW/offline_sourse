@@ -15,8 +15,8 @@ cp -r /var/cache/apt/archives /var/debs
 /var/debs/
 sudo chmod -R 777 /var/debs/
 切换到var目录，注意一定的切换，不然源找不到安装包。
-dpkg-scanpackages debs /dev/null |gzip > /var/debs/Packages.gz
-cp /var/debs/Packages.gz /var/debs/archives/Packages.gz
+sudo dpkg-scanpackages debs  /dev/null  | gzip > debs/Packages.gz
+
 
 deb file:/var debs/
 
