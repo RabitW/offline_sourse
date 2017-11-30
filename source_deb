@@ -15,7 +15,7 @@ cp -r /var/cache/apt/archives /var/debs
 /var/debs/
 sudo chmod -R 777 /var/debs/
 dpkg-scanpackages /var/debs/ /dev/null |gzip > /var/debs/Packages.gz -r
-cp /var/debs/Packages.gz //var/debs/archives/Packages.gz
+cp /var/debs/Packages.gz /var/debs/archives/Packages.gz
 
 deb file:/var debs/
 
