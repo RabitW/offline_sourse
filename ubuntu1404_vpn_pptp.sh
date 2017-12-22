@@ -32,6 +32,7 @@ iptables-save >/etc/iptables-rules
 vim  /etc/network/interfaces
 pre-up iptables-restore </etc/iptables-rules
 
+
 设置MTU，防止包过大：
 sudo iptables -A FORWARD -s 10.100.0.0/24 -p tcp -m tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1200
 

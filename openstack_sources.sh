@@ -25,6 +25,13 @@ apt-get -y install openstack-dashboard --force-yes
 apt-get -y install python-pip --force-yes
 apt-get -y install dpkg-dev --force-yes
 
+apt-get -y install nova-compute-libvirt --force-yes
+apt-get -y install nova-compute-kvm --force-yes
+apt-get -y install python-nova --force-yes
+apt-get -y install nova-common --force-yes
+apt-get -y install nova-compute --force-yes
+apt-get -y install neutron-openvswitch-agent --force-yes
+
 # apt-get -y install erlang-nox --force-yes
 # apt-get -y install zip --force-yes
 # apt-get -y install python-django-horizon --force-yes
