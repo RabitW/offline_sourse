@@ -1,0 +1,5 @@
+只允许1.85.221.237访问80口
+iptables -I INPUT -p TCP --dport 80 -j DROP
+iptables -I INPUT -s 1.85.221.237 -p TCP --dport 80 -j ACCEPT
+
+iptables -D INPUT 1
